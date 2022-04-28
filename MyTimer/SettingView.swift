@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SettingView: View {
-    @State var timerValue = 10
+    @AppStorage("timer_value") var timerValue = 10
+
     var body: some View {
         ZStack {
             Color("backgroundSetting")
@@ -38,6 +39,7 @@ struct SettingView: View {
                     Text("選択")
                 }
                 .pickerStyle(.wheel)
+                Spacer()
             }
         }
     }
